@@ -1,0 +1,25 @@
+rest_command:
+  reset_lg_dev_mode:
+    url: !secret lg_dev_mode_reset_url
+    method: GET
+
+automation:
+  - id: reset_lg_dev_mode_daily
+    alias: Reset LG Dev Mode Session Daily
+    description: Keep LG WebOS Dev Mode session alive
+    trigger:
+      - platform: time
+        at: "03:00:00"
+        weekday:
+          - fri
+    action:
+      - service: rest_command.reset_lg_dev_mode
+    mode: single
+
+logger:
+  default: warning
+  logs:
+    homeassistant.components.rest_command: debug
+    homeassistant.helpers.service: debug
+
+mobile_app:

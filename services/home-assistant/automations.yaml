@@ -1,0 +1,36 @@
+- id: '1767133511288'
+  alias: Reset LG dev token
+  description: ''
+  triggers:
+  - trigger: time
+    at: 05:00:00
+    weekday:
+    - fri
+  conditions: []
+  actions:
+  - action: rest_command.reset_lg_dev_mode
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1767133604228'
+  alias: LG automation
+  description: ''
+  triggers:
+  - trigger: time
+    at: 05:00:00
+    weekday:
+    - fri
+  conditions: []
+  actions: []
+  mode: single
+- id: '1767133697432'
+  alias: LG automation
+  description: ''
+  triggers:
+  - trigger: time
+    at: 05:00:00
+    weekday:
+    - fri
+  conditions: []
+  actions: []
+  mode: single
